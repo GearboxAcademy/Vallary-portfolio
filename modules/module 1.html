@@ -1,0 +1,71 @@
+<!DOCTYPE >
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rasperry Pi Documentation</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>Introduction To Embedded Systems</h1>
+            </div>
+            <div class="pinout">
+                <div class="article big">
+            
+                  
+                </div>
+                <div class="article medium">
+                    <div class="article content">
+                        <h2>Rasperry Pi</h2>
+        <p>This Microcontroller board is a great choice for powering numerous electronic projects.<br> Unlike other Raspberry Pi Boards, <br>Pico doesn't run any operating system; instead, it runs a simple code written in MicroPython or C on a Computer which is later uploaded on it.One end of the board has a Micro-USB port which, when used with <br> USB cable, powers the board and allows it to communicate to our computer for programming. The other end has a debug port for debugging<br style="color:DodgerBlue;"></p>
+    <p>Sensors and Actuators Working principle<br>A DC servo motor is an assembly of four major components, 
+
+        working principle of servo motor
+        
+        DC motor
+        Position sensing device
+        Gear assembly
+        Control circuit
+        In digital control, micro controller used for generating the PWM pluses in terms of duty cycles to produce more accurate control signals.
+        
+        Working principle 
+        
+        The position sensor provide a feedback signal corresponding to the present position of the load. This sensor is normally a potentiometer<br> 
+        that produces the voltage corresponding to the absolute angle of the motor shaft through gear mechanism.<br>
+         Then the feedback voltage value applies on the input of error amplifier.
+        <br>HC-SR04 Hardware Overview
+        An HC-SR04 ultrasonic distance sensor actually consists of two ultrasonic transducers.
+        
+        One acts as a transmitter that converts the electrical signal into 40 KHz ultrasonic sound pulses.
+        <br>
+
+        The other acts as a receiver and listens for the transmitted pulses.
+        
+        When the receiver receives these pulses, it produces an output pulse whose width is proportional to the distance of the object in front.
+        VCC supplies power to the HC-SR04 ultrasonic sensor. You can connect it to the 5V output from your Arduino.
+        <br>Trig (Trigger) pin is used to trigger ultrasonic sound pulses. By setting this pin to HIGH for 10µs, the sensor initiates an ultrasonic burst.
+
+        Echo pin goes high when the ultrasonic burst is transmitted and remains high until the sensor receives an echo, after which it goes low.<br> 
+        By measuring the time the Echo spin stays high, the distance can be c
+
+                    </div>
+                </div>
+                <div class="article medium">
+                    <img src="images\Capture.JPG">
+                    <div class="article content">
+                        <h2>MicroPython</h2>
+                        <p>MicroPython is a full implementation of the Python 3 programming language that runs directly on embedded hardware like Raspberry Pi Pico. You get an interactive prompt (the REPL) to execute commands immediately via USB Serial, and a built-in filesystem. The Pico port of MicroPython includes modules for accessing low-level chip-specific hardware.
+
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </body>
+</html>

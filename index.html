@@ -1,23 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width", initial-scae="1">
-    <title>My portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-         <div class="sidebar">
-              <h1>Welcome to my portfolio</h1>
-              <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-               </nav>
-         </div>
-        <p class="p-welcome">Welcome to my portfolio feel free to look around</p>
-        <a href="Project doc.html">Visit my documentation and projects page here!</a>
-    </body>
-    </html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h1>Your Name</h1>
+        <nav>
+          <header>
+            <button class="menu-button">
+                <span class="menu-icon">&#9776;</span> Menu
+            </button>
+        </header>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Modules</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="content">
+        
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Write a brief introduction about yourself here.</p>
+        </section>
+
+        <section id="portfolio">
+            <h2>Modules</h2>
+            <div class="project">
+                <h3>Module 1:Introduction to Embedded Systems</h3>
+                <p>This module provides an introduction to the fundamentals of embedded systems, including hardware and software design, project management, IDEs such as Thonny, Arduino, Raspberry Pi, and MicroPython.
+               <br>I will also carry out various projects throughout the module to gain hands-on experience with embedded systems development.I will define and explain the key concepts of embedded systems and apply project 
+               <br> principles to embedded systems development using IDEs such as Thonny, Arduino, Raspberry Pi, and MicroPython to develop embedded systems and carry out various projects</p>
+                <a href="View Project.html">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Project 2</h3>
+                <p>Description of Project 2.</p>
+                <a href="#">View Project</a>
+            </div>
+            <!-- Add more project entries as needed -->
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Contact information and a contact form can go here.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Your Name</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
