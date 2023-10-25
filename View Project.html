@@ -27,47 +27,22 @@
                            MicroPython is a programming language that runs directly on embedded hardware, for example,Raspberry Pi Pico. It is a full implementation of the Python (3) programming language.Programming Raspberry Pi Pico is a very easy process.<br>
                            Users can program the board by connecting it via USB port, and then just drag and drop the file into Raspberry Pi Pico.Added micropython UF2 file - Used for creating a software substrate able to directly transform your Python-like scripts<br>
                            into machine language code without the need to re-compile your code every time.<br>To download the Thonny Python IDE follow the given link: <a href="https://thonny.org/">https://thonny.org/</a> </p>
-
-
-        <p>This Microcontroller board is a great choice for powering numerous electronic projects.<br> Unlike other Raspberry Pi Boards, <br>Pico doesn't run any operating system; instead, it runs a simple code written in MicroPython or C on a Computer which is later uploaded on it.One end of the board has a Micro-USB port which, when used with <br> USB cable, powers the board and allows it to communicate to our computer for programming. The other end has a debug port for debugging<br style="color:DodgerBlue;"></p>
-    <p>Sensors and Actuators Working principle<br>A DC servo motor is an assembly of four major components, 
-
-        working principle of servo motor
-        
-        DC motor
-        Position sensing device
-        Gear assembly
-        Control circuit
-        In digital control, micro controller used for generating the PWM pluses in terms of duty cycles to produce more accurate control signals.
-        
-        Working principle 
-        
-        The position sensor provide a feedback signal corresponding to the present position of the load. This sensor is normally a potentiometer<br> 
-        that produces the voltage corresponding to the absolute angle of the motor shaft through gear mechanism.<br>
-         Then the feedback voltage value applies on the input of error amplifier.
-        <br>HC-SR04 Hardware Overview
-        An HC-SR04 ultrasonic distance sensor actually consists of two ultrasonic transducers.
-        
-        One acts as a transmitter that converts the electrical signal into 40 KHz ultrasonic sound pulses.
-        <br>
-
-        The other acts as a receiver and listens for the transmitted pulses.
-        
-        When the receiver receives these pulses, it produces an output pulse whose width is proportional to the distance of the object in front.
-        VCC supplies power to the HC-SR04 ultrasonic sensor. You can connect it to the 5V output from your Arduino.
-        <br>Trig (Trigger) pin is used to trigger ultrasonic sound pulses. By setting this pin to HIGH for 10µs, the sensor initiates an ultrasonic burst.
-
-        Echo pin goes high when the ultrasonic burst is transmitted and remains high until the sensor receives an echo, after which it goes low.<br> 
-        By measuring the time the Echo spin stays high, the distance can be c
-
-                    </div>
-                </div>
-                <div class="article medium">
-                    <img src="images\Capture.JPG">
-                    <div class="article content">
-                        <h2>MicroPython</h2>
-                        <p>MicroPython is a full implementation of the Python 3 programming language that runs directly on embedded hardware like Raspberry Pi Pico. You get an interactive prompt (the REPL) to execute commands immediately via USB Serial, and a built-in filesystem. The Pico port of MicroPython includes modules for accessing low-level chip-specific hardware.
-
+                           <h3>Arduino IDE</h3>
+                            Arduino IDE is an open source software that is mainly used for writing and compiling the code into the Arduino Module.The IDE environment mainly contains two basic parts: Editor and Compiler where former is used for writing the required code<br>
+                            and later is used for compiling and uploading the code into the given Arduino Module.<br>This environment supports both C and C++ languages.
+                            Whenever you’re using Arduino, you need to declare global variables and instances to be used later on. In a nutshell, a variable allows you to name and store a value to be used in the future <br>while a class is a collection of functions and variables that are kept together in one
+                            place.
+                            <h3>Raspberry Pi Pico</h3>
+                            Raspberry Pi Pico is a low-cost, high-performance microcontroller board with flexible digital interfaces.The Raspberry Pi Pico series is a range of tiny, fast, and versatile boards built using RP2040.Programmable in C and MicroPython,<br>
+                            Pico is adaptable to a vast range of applications and skill levels, and getting started is as easy as dragging and dropping a file. Raspberry Pico is a wide range of flexible I/O options includes I2C, SPI, and - uniquely - Programmable I/O (PIO).<br>
+                            These support endless possible applications for this small and affordable package.Below is Raspberry pinout:
+                            <div class="article medium">
+                                <img src="images\Capture.JPG">
+                                <div class="article content">
+                            <h2>MicroPython</h2>
+                            MicroPython is a full implementation of the Python 3 programming language that runs directly on embedded hardware like Raspberry Pi Pico. You get an interactive prompt (the REPL) to execute commands immediately via USB Serial, and a built-in filesystem.<br>
+                            The Pico port of MicroPython includes modules for accessing low-level chip-specific hardware.Pico is programmed by connecting it to a computer via USB, then dragging and dropping a file onto it and adding a downloadable UF2 file to install MicroPython more easily.<br>
+                            The UF2 file is suitable for flashing microcontrollers over MSC (Mass Storage Class; aka removable flash drive).
                         </p>
                         
                     </div>
