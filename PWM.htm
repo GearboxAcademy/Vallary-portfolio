@@ -1,14 +1,14 @@
-from machine import Pin, PWM
-from time import sleep
+from machine import Pin, PWM<br>
+from time import sleep<br>
 
-pwm = PWM(Pin(15))
+pwm = PWM(Pin(15))<br>
 
-pwm.freq(1000)
+pwm.freq(1000)<br>
 
-while True:
-    for duty in range(65025):
-		pwm.duty_u16(duty)
-		sleep(0.0001)
-	for duty in range(65025, 0, -1):
-		pwm.duty_u16(duty)
-		sleep(0.0001)
+while True:<br>
+    for duty in range(65025):<br>
+		pwm.duty_u16(duty)<br>
+		sleep(0.0001)<br>
+	for duty in range(65025, 0, -1):<br>
+		pwm.duty_u16(duty)<br>
+		sleep(0.0001)<br>

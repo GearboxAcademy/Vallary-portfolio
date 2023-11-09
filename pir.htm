@@ -1,0 +1,11 @@
+from machine import Pin<br>
+from time import sleep<br>
+
+pir = Pin(15, Pin.IN, Pin.PULL_DOWN)<br>
+sleep(1)<br>
+
+print('Ready')<br>
+while True:<br>
+    if pir.value():<br>
+        print('Motion Detected')<br>
+        sleep(1)
