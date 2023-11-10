@@ -1,0 +1,124 @@
+<!DOCTYPE >
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rasperry Pi Documentation</title>
+        <link rel="stylesheet" href="style.css">
+            <style>
+             </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>Introduction To Embedded Systems III</h1>
+            </div>
+            <div class="pinout">
+                <div class="article big">
+            
+                  
+                </div>
+                <div class="article medium">
+                    <div class="article content">
+                        <h2>Development Board Overview</h2>
+                        <p>ESP32 is the platformin use while nodemcu-32s as the board type.<br>                    ESP32-DevKit is a small-sized ESP32-based development board produced by Espressif. Most of the I/O pins are broken out to the pin headers on both sides for easy interfacing.<br>
+                           can either connect peripherals with jumper wires or mount ESP32-DevKit on a breadboard
+                           <style>
+                            table, th, td {
+                              border:1px solid black;
+                            }
+                            </style>
+                            <body>
+                            
+                                                     
+                            <table style="width:100%">
+                              <tr>
+                                <th>Key Component</th>
+                                <th>Description</th>
+                                
+                                
+                              </tr>
+                              <tr>
+                                <td>ESP32-WROOM-32</td>
+                                <td>A module with ESP32 at its core. For more information, see ESP32-WROOM-32 Datasheet.</td>
+                              <tr>
+                                <td>EN</td>
+                                <td>Reset button.</td>
+                                
+                              </tr>
+                              <tr>
+                                <td>Boot</td>
+                                <td>Download button. Holding down Boot and then pressing EN initiates Firmware Download mode for downloading firmware through the serial port.</td>
+                               
+                              </tr>
+                              <tr>
+                                <td>>USB-to-UART Bridge</td>
+                                <td>Single USB-UART bridge chip provides transfer rates of up to 3 Mbps.</td>
+                               
+                              </tr>
+                              <tr>
+                                <td>I/O</td>
+                                <td>Most of the pins on the ESP module are broken out to the pin headers on the board. You can program ESP32 to enable multiple functions such as PWM, ADC, DAC, I2C, I2S, SPI, etc.</td>
+                               
+                              </tr>
+                              <tr>
+                                <td>5V Power On LED</td>
+                                <td>Turns on when the USB or an external 5V power supply is connected to the board. For details see the schematics in Related Documents.
+                              </tr>
+                            </table>                                             
+                            <div class="article medium">
+                            <img src="https://docs.ai-thinker.com/_media/esp32/boards/nodemcu/nodemcu_32s_pin.png">
+                            <div class="article content">
+                           <h4>3.Short Circuit</h4>
+                              A short-circuit, a low-resistance connection forms between two points in an electric circuit. As a result, the current tends to flow through this newly formed connection rather <br>
+                              than along the intended path. For example, if there is a direct connection between the battery’s negative and positive terminal, the current will flow through it rather than passing through the circuit.<br>
+                              In a short circuit current can flow at dangerously high levels that can damage electronic equipment and even cause explosions in some cases.
+                            <h3>Sensors and Actuators</h3>
+                            A sensor is an electrical instrument that monitors and measures physical aspects of an environment and sends an electrical signal to a control center when certain pre-determined conditions are detected.<br>
+                            Sensors turn physical inputs into electrical signals that are output to the control center. They can monitor the health of equipment or the status of a sensitive environment.Sensors turn a physical input into an electrical output,<br>
+                            and actuators do the opposite.They take electrical signals from control modules and turn them into physical outputs. They can perform a wide range of functions, from turning rotors and valves to virtually anything else.<br>
+                            <h4>Physical Computing With Python</h4>
+                            It involves interactive systems that can sense and respond to the world around them. While this definition is broad enough to encompass systems such as smart automotive traffic control systems or factory automation processes,<br>
+                            is not commonly used to describe them. In a broader sense, physical computing is a creative framework for understanding human beings' relationship to the digital world.It puts into use embedded microcontroller-based interactive systems<br>
+                            that can sense the world around them and/or control outputs such as lights, displays and motors. Assembling the hardware elements of a physical computer and programming it to give desired behavior.<br>
+                            <h4>Pulse Width Modulation</h4>
+                            Allows you to give analogue behaviours to digital devices, such as LEDs. This means that rather than an LED being simply on or off, you can control its brightness.For this activity, you can use the circuit from the last step.<br>
+                            <code><iframe src="PWM.htm"height="200" width="300" title="PWM.htm"></iframe></code><br>
+                            <h4>Analog signals</h4>
+                            Analogue inputs are used in control systems with input sensors that produce a voltage, current or resistance change in response to an environmental variation or system measurement and instead of only reading the values of 1 and 0 (on and off),<br>
+                            it can read values in between.The signals from sensors that measure surrounding natural factors such as temperature, pressure, and flow rate are often analog signals, and most control actuators move according to analog signals.<br>
+                            On the other hand, only digital signals can be handled by computers. For this reason, in order to input a signal from a sensor using a computer, or to output a signal to an actuator, it's necessary to have a device that can bridge the analog signal<br>
+                            and the digital signal handled by the computer. That bridge is called an analog I/O interface.<br>
+                            A potentiometer is the perfect analogue device for this activity.Once the potentiometeris turned on the maximum and minimum values are approximately between 0 and 65025.These values are used to control the duty cycle for PWM on the LED.<br>
+                            <code><iframe src="analogpins.htm"height="200" width="300" title="analogpins.htm"></iframe></code><br>
+                            <h4>PIR</h4>
+                            A passive infrared sensor (PIR sensor) is an electronic sensor that measures infrared (IR) light radiating from objects in its field of view. They are most often used in PIR-based motion detectors. PIR sensors are commonly used in security<br>
+                            alarms and automatic lighting applications. It can detect changes in the amount of infrared radiation impinging upon it, which varies depending on the temperature and surface characteristics of the objects in front of the sensor.<br>
+                            When an object, such as a person, passes in front of the background, such as a wall, the temperature at that point in the sensor's field of view will rise from room temperature to body temperature, and then back again. The sensor converts the resulting<br>
+                            change in the incoming infrared radiation into a change in the output voltage, and this triggers the detection. Objects of similar temperature but different surface characteristics may also have a different infrared emission pattern, and thus moving them<br>
+                            with respect to the background may trigger the detector as well.<br>
+                            You can detect motion with the PIR using the code below:<br>
+                            <code><iframe src="pir.htm"height="200" width="300" title="pir.htm"></iframe></code><br>
+                            <h4>Ultrasonic Sensor</h4>
+                            An ultrasonic distance sensor sends out pulses of ultrasound which are inaudible to humans, and detects the echo that is sent back when the sound bounces off a nearby object. It then uses the speed of sound to calculate the distance from the object.<br>
+                            Ultrasonic transducer is energized by high voltage pulses and starts to emit an ultrasonic signal. The ultrasonic signal is reflected by the target towards the sensor.Trigger circuit measures the time between the emission and the detection of the signal.<br>
+                            Since the speed of the ultrasonic beam in air is known, it is easy to have not only an indication of the presence of the target, but also a measure of the distance between sensor and target.
+                            <h4>Ultrasonic Sensor Working Principle</h4>
+                            Ultrasonic sensors emit short, high-frequency sound pulses at regular intervals. These propagate in the air at the velocity of sound. If they strike an object, then they reflected back as an echo signals to the sensor, which itself computes the distance<br>
+                            to the target based on the time-span between emitting the signal and receiving the echo. An ultrasonic sensors are excellent at suppressing background interference. Virtually all materials which reflect sound can be detected, regardless of their colour.<br>
+                            Even transparent materials or thin foils represent no problem for an ultrasonic sensor. microsonic ultrasonic sensors are suitable for target distances from 20 mm to 10 m and as they measure the time of flight they can ascertain a measurement with pinpoint accuracy.<br>
+                            If you need to measure the specific distance from your sensor, this can be calculated based on this formula: We know that, Distance= Speed* Time.<br>The speed of sound waves is 343 m/s. So, Total Distance= (343 * Time of hight(Echo) pulse)/2 Total distance is divided by 2 because signal travels from HC-SR04 to object and returns to the module HC-SR-04.
+                            Use the following code to read the Distance<br>
+                            <code><iframe src="Ultrasonic.htm"height="200" width="300" title="Ultrasonic.htm"></iframe></code><br>
+                            
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </body>
+</html>
