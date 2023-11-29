@@ -1,24 +1,85 @@
-<!DOCTYPE html>
+<div class="sidebar">
+        <h1>Vallary Ogolla</h1>
+        <nav>
+          <header>
+            <button class="menu-button">
+                <span class="menu-icon">&#9776;</span> Menu
+            </button>
+        </header>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Modules</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="content">
+        
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Write a brief introduction about yourself here.</p>
+        </section>
+
+        <section id="portfolio">
+            <h2>Modules</h2>
+            <div class="project">
+                <h3>Module 1:Introduction to Embedded Systems</h3>
+                <p>This module provides an introduction to the fundamentals of embedded systems, including hardware and software design, project management, IDEs such as Thonny, Arduino, Raspberry Pi, and MicroPython.
+               <br>I will also carry out various projects throughout the module to gain hands-on experience with embedded systems development.I will define and explain the key concepts of embedded systems and apply project 
+               <br> principles to embedded systems development using IDEs such as Thonny, Arduino, Raspberry Pi, and MicroPython to develop embedded systems and carry out various projects</p>
+                <a href="View Project.html">View Module 1</a>
+            </div>
+            <div class="project">
+                <h3>Module 2: Introduction to Embedded System II</h3>
+                <p>This module mainly focuses on common electronic components used in embedded systems.An embedded as part of a complete device often including electrical or electronic hardware and mechanical parts.<br>
+                   The elctronic components used include resistors, capacitors, transistorsand switches.The components are connected to form hardware circuitry which integrates with software such as arduino and thonny to provide project solutions.</p>
+                <a href="module 2.html">View Module 2</a>
+            </div>
+            <div class="project">
+                <h3>Module 3: Introduction to Embedded System III</h3>
+                <p>This module mainly focuses on ESP32 and Arduino microcontrollers as platforms for developing embedded systems. ESP32 is a low-cost, low-power microcontroller with built-in Wi-Fi and Bluetooth connectivity.<br>
+                   The Arduino IDE uses a simplified version of the C++ programming language and is open-source.Some of the key areas will be writing,testing and debugging the firmware for your embedded system and finally deploying it.<br>
+                   We will also carry out various projects using Esp32 and arduino IDE as the programming software</p>
+                <a href="module 3.html">View Module 3</a>
+            </div>
+            <!-- Add more project entries as needed -->
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Contact information and a contact form can go here.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Your Name</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+MODULE 3
+<!DOCTYPE >
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-  background: 	#faebd7;
-}
-
-.content {
-  max-width: 900px;
-  margin: auto;
-  background: #F0EDE1;
-  padding: 10px;
-}
-iframe { background-color:#e8dcfc; }
-</style>
-</head>
-<body>
-
-<div class="content">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rasperry Pi Documentation</title>
+        <link rel="stylesheet" href="style.css">
+            <style>
+             </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>Introduction To Embedded Systems III</h1>
+            </div>
             <div class="pinout">
                 <div class="article big">
             
@@ -122,7 +183,8 @@ iframe { background-color:#e8dcfc; }
                     </div>
                 </div>
             </div>
-</div>
-
-</body>
+            
+        </div>
+        
+    </body>
 </html>
