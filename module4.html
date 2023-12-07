@@ -1,0 +1,80 @@
+<!DOCTYPE >
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Communication Protocols</title>
+        <link rel="stylesheet" href="style.css">
+            <style>
+             </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>Embedded Systems IV</h1>
+            </div>
+            <div class="pinout">
+                <div class="article big">
+            
+                  
+                </div>
+                <div class="article medium">
+                    <div class="article content">
+                        <h2>Communication Protocol</h2>
+                        <p>Embedded electronics is all about interlinking circuits (processors or other integrated circuits) to create a symbiotic system. In order for those individual circuits to swap their information,<br>
+                           they must share a common communication protocol.The main focus will be on SPI,UART,I2C. Serial communication is divided into two that is <em>asynchrnous and synchronus</em> serial communication<br>
+                           In serial communication, data is sent one bit at a time using one signal line, so in order for the receiving side to accurately receive the data, the sending side must know at what speed it is sending each bit.<br>
+                           <strong>Serial Communication</strong>
+                           <div>
+                             <ul>
+                               <li>Sends data bit by bit at one clock pulse</li>
+                               <li>Requires one wire to transmit the data</li>
+                               <li>Preferred for long distance communication</li>
+                               <li>Communication speed is slow</li>
+                             </ul>
+                           </div>
+                           
+                           <h4>1.UART</h4>
+                           A universal asynchronous receiver/transmitter (UART) is a block of circuitry responsible for implementing serial communication. Essentially, the UART acts as an intermediary between parallel and serial interfaces.<br>
+                           On one end of the UART is a bus of eight-or-so data lines (plus some control pins), on the other is the two serial wires - RX and TX.<br>
+                           As the R and T in the acronym dictate, UARTs are responsible for both sending and receiving serial data. On the transmit side, a UART must create the data packet- appending sync and parity bits - <br>
+                           and send that packet out the TX line with precise timing (according to the set baud rate). On the receive end, the UART has to sample the RX line at rates according to the expected baud rate, pick out the sync bits, and spit out the data.
+                           <h4>2. I2C</h4>
+                           The Inter-Integrated Circuit (I2C) Protocol is a protocol intended to allow multiple "peripheral" digital integrated circuits ("chips") to communicate with one or more "controller" chips.<br>
+                           It is only intended for short distance communications within a single device. Like Asynchronous Serial Interfaces (such as RS-232 or UARTs), it only requires two signal wires to exchange information.<br>
+                           It can support a multi-controller system, allowing more than one controller to communicate with all peripheral devices on the bus (controller devices take turns using the bus lines to talk to each other).<br>
+                           Data rates fall between asynchronous serial and SPI; most I2C devices can communicate at 100kHz or 400kHz. There is some overhead with I2C; for every 8 bits of data to be sent, one extra bit of meta data<br>
+                           (the "ACK/NACK" bit, which we'll discuss later) must be transmitted.
+                           <h4>3.SPI</h4>
+                           Serial Peripheral Interface (SPI) is an interface bus commonly used to send data between microcontrollers and small peripherals such as shift registers, sensors, and SD cards. It uses separate clock and data lines,<br>
+                           along with a select line to choose the device you wish to talk to.It's a "synchronous" data bus, which means that it uses separate lines for data and a "clock" that keeps both sides in perfect sync. <br>
+                           The clock is an oscillating signal that tells the receiver exactly when to sample the bits on the data line. This could be the rising (low to high) or falling (high to low) edge of the clock signal; <br>
+                           <strong>Advantages of SPI:</strong>
+                           <div>
+                             <ul>
+                               <li>It's faster than asynchronous serial</li>
+                               <li>The receive hardware can be a simple shift register</li>
+                               <li>It supports multiple peripherals</li>
+                              </ul>
+                           </div>
+                           
+                            <h3>Sensors and Actuators</h3>
+                            A sensor is an electrical instrument that monitors and measures physical aspects of an environment and sends an electrical signal to a control center when certain pre-determined conditions are detected.<br>
+                            Sensors turn physical inputs into electrical signals that are output to the control center. They can monitor the health of equipment or the status of a sensitive environment.Sensors turn a physical input into an electrical output,<br>
+                            and actuators do the opposite.They take electrical signals from control modules and turn them into physical outputs. They can perform a wide range of functions, from turning rotors and valves to virtually anything else.<br>
+                            <h4>Physical Computing With Python</h4>
+                            It involves interactive systems that can sense and respond to the world around them. While this definition is broad enough to encompass systems such as smart automotive traffic control systems or factory automation processes,<br>
+                            is not commonly used to describe them. In a broader sense, physical computing is a creative framework for understanding human beings' relationship to the digital world.It puts into use embedded microcontroller-based interactive systems<br>
+                            that can sense the world around them and/or control outputs such as lights, displays and motors. Assembling the hardware elements of a physical computer and programming it to give desired behavior.<br>
+                            <h4>Pulse Width Modulation</h4>
+                            Allows you to give analogue behaviours to digital devices, such as LEDs. This means that rather than an LED being simply on or off, you can control its brightness.For this activity, you can use the circuit from the last step.<br>
+                            <code><iframe src="PWM.htm"height="200" width="300" title="PWM.htm"></iframe></code><br>
+                            
+                </div>
+            </div>
+            
+        </div>
+        
+    </body>
+</html>
