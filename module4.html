@@ -6,7 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Communication Protocols</title>
         <link rel="stylesheet" href="style.css">
-            <style>
+            <style>iframe {
+                background-color:#e8dcfc;
+              } 
+             
              </style>
     </head>
     <body>
@@ -58,18 +61,44 @@
                                <li>It supports multiple peripherals</li>
                               </ul>
                            </div>
-                           
-                            <h3>Sensors and Actuators</h3>
-                            A sensor is an electrical instrument that monitors and measures physical aspects of an environment and sends an electrical signal to a control center when certain pre-determined conditions are detected.<br>
-                            Sensors turn physical inputs into electrical signals that are output to the control center. They can monitor the health of equipment or the status of a sensitive environment.Sensors turn a physical input into an electrical output,<br>
-                            and actuators do the opposite.They take electrical signals from control modules and turn them into physical outputs. They can perform a wide range of functions, from turning rotors and valves to virtually anything else.<br>
-                            <h4>Physical Computing With Python</h4>
-                            It involves interactive systems that can sense and respond to the world around them. While this definition is broad enough to encompass systems such as smart automotive traffic control systems or factory automation processes,<br>
-                            is not commonly used to describe them. In a broader sense, physical computing is a creative framework for understanding human beings' relationship to the digital world.It puts into use embedded microcontroller-based interactive systems<br>
-                            that can sense the world around them and/or control outputs such as lights, displays and motors. Assembling the hardware elements of a physical computer and programming it to give desired behavior.<br>
-                            <h4>Pulse Width Modulation</h4>
-                            Allows you to give analogue behaviours to digital devices, such as LEDs. This means that rather than an LED being simply on or off, you can control its brightness.For this activity, you can use the circuit from the last step.<br>
-                            <code><iframe src="PWM.htm"height="200" width="300" title="PWM.htm"></iframe></code><br>
+                                                   
+                            <h3>Oled display using SPI</h3>
+                            Interfacing SSD1306 OLED Display with Raspberry Pi Pico
+                            MicroPython code is interfaced to the OLED display with the Pico board using Thonny IDE.Thonny IDE requires an SSD1306 driver code which must be written before displaying any text or graphics on the OLED display.<br>
+                            he programming process is divided into two main parts. writing the SSD1306.py driver code and the main.py code. The SSD1306.py code should be written and uploaded first, and then the main.py code can be uploaded and run.<br>
+                            The code for the SSD1306.py file is responsible for setting up the OLED display and configuring it to work with the Raspberry Pi Pico. It includes library imports, initialization commands, and functions for displaying text<br>
+                            and graphics on the OLED screen.The main.py code, on the other hand, is where the main logic of the program resides. It also includes commands for controlling the OLED display and updating the displayed information.<br>
+                            Below is code for Raspberry and Oled<br>
+                            <code><iframe src="OLED.htm"height="200" width="300" title="OLED.htm"></iframe></code><br>
+                          
+                                    <h2>click on the picture below to iew the youtube video of the oled display and code</h2>
+                                  
+            
+                                    </p>
+                                    
+                                </div>
+                            <a href="https://en.wikipedia.org/wiki/Cat"><img src="images/Oled and Raspberrypi Pico.JPG" alt="Five cats looking around a field."/></a>
+                            <h4>AHT10 Temperature and Relative Humidity and I2C</h4>
+                            The AHT10 is an accurate temperature and humidity sensor in a very small package that can be accessed via an I2C interface. While it has a temperature measurement range of between -40°C and 85°C, its typical error of ± 0.3<br>
+                            is achieved between around 0°C and 55°C.<br>
+                            <strong>How is the AHT10 sensor accessed?</strong>
+                            The sensor is accessed via I2C, but we can abstract the complexities of this via a pre-built MicroPython module.To make use of the module we will need to download it from GitHub and then<br>
+                            copy it over to our Pico. I found this most easily accomplished by first downloading the file to the main computer and then going File >> Open on Thonny and selecting the appropriate file.<br>
+                            From there go File >> Save as… and select the Pico as the location to save the file (making sure to save it with the appropriate name (ahtx0.py))
+                            <div class="article medium">
+                                <img src="images\AHT10.JPG">
+                                <div class="article content">
+                                    <h2>Connecting the AHT10 to the Pico</h2>
+                                        The connection is fairly simple with only four connections being required. Power, ground, Serial CLock line (SCL) and Serial DAta line (SDA). The following connections are used for this example;
+                                        div>
+                             <ul>
+                               <li>AHT10 GND to Ground (pin 38) on the Pico (Black)</li>
+                               <li>AHT10 VIN to the 3V3(OUT) (pin 36) on the Pico (Red)</li>
+                               <li> AHT10 SCL to I2C1 SCL (pin 32, or GPIO27) on the Pico (Orange)</li>
+                               <li> AHT10 SDA to I2C1 SDA (pin 31, or GPIO26) on the Pico (Brown)</li>
+                              </ul>
+                           </div>
+                                                            
                             
                 </div>
             </div>
