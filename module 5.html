@@ -12,6 +12,13 @@
     align-items: center;
     justify-content: center;
   }
+  .header {
+  padding: 30px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
   
   img {
     max-width: 25%;
@@ -26,11 +33,15 @@
     float: left;
   }
   </style>
-             </style>
+             
     </head>
     <body>
         
-                <h1>Access Control Using Relays</h1>
+      <div class="header">
+        <h1>Access Control Using Relays</h1>
+        <p>My supercool header</p>
+      </div>
+      
            
                         <h2>What is a relay?</h2>
                         <p>Relays are a type of switch that can be turned on and off electronically. Internally they are actually made up of two physically and electrically separated circuits: <br>
@@ -101,11 +112,11 @@
                             <br>
                             <h4> Switching an LED</h4>
                             <p>Plug the Pico into your computer, open up Thonny and copy-paste the following code into a new script:</p> <br>
-                            <code><iframe src="images\RelayLED"height="200" width="1400" title="images\RelayLED"></iframe></code><br>
+                            <code><iframe src="RelayLed.htm"height="200" width="1400" title="images\RelayLED"></iframe></code><br>
                             <h4>Normally Open</h4>
                             The circuit from the previous example has the is connected to the Normally Open terminal of the Relay, which means by default the Fan will be OFF.<br>
                             <p>Create a new file in Thonny and copy-paste the following script:</p>
-                            <code><iframe src="images\Normally open"height="200" width="1400" title="images\Normally open"></iframe></code><br>
+                            <code><iframe src="Normally open.htm"height="200" width="1400" title="images\Normally open"></iframe></code><br>
                             <h4>Normally Closed</h4>
                             <p>Now let's see Normally Closed. Leave the Pico disconnected, disconnect the 12V power source, and move the wire connected to the Normally Open terminal of the Relay to the Normally Closed terminal.
                             </p>

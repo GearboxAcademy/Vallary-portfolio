@@ -1,0 +1,13 @@
+from machine import Pin<br>
+import utime<br>
+ 
+relay=Pin(16,Pin.OUT)<br>
+led=Pin(15,Pin.OUT)<br>
+ 
+while True:<br>
+  relay.value(1)<br>
+#   led.value(1)#Set relay turn on<br>
+  utime.sleep(5)<br>
+  relay.value(0)            #Set relay turn off<br>
+  utime.sleep(5)<br>
+#   led.value(0)<br>

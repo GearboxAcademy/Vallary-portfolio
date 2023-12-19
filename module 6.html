@@ -1,0 +1,200 @@
+<!DOCTYPE >
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rasperry Pi Documentation</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            body {
+background: 	#faebd7;
+}
+
+.content {
+max-width: 900px;
+margin: auto;
+background: #F0EDE1;
+padding: 10px;
+}
+iframe {
+background-color:#d1a4ab;
+} 
+         </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>Introduction To Embedded Systems II</h1>
+            </div>
+            <div class="pinout">
+                <div class="article big">
+            
+                  
+                </div>
+                <div class="article medium">
+                    <div class="article content">
+
+                        <h2>Types of Internet Protocols</h2>
+                        <p>Internet Protocols are of different types having different uses. These are mentioned below:<br>
+                           <h4>1. TCP/IP(Transmission Control Protocol/ Internet Protocol)</h4>
+                           These are a set of standard rules that allows different types of computers to communicate with each other. The IP protocol ensures that each computer that is connected to the Internet is having a specific serial number called the IP address.
+                           TCP specifies how data is exchanged over the internet and how it should be broken into IP packets. It also makes sure that the packets have information about the source of the message data, the destination of the message data, the sequence 
+                           in which the message data should be re-assembled, and checks if the message has been sent correctly to the specific destination.
+                           
+                           <h4>2. SMTP(Simple Mail Transfer Protocol)</h4>These protocols are important for sending and distributing outgoing emails. This protocol uses the header of the mail to get the email id of the receiver and enters the mail into the queue of outgoing mail.
+                           And as soon as it delivers the mail to the receiving email id, it removes the email from the outgoing list.
+                           The message or the electronic mail may consider the text, video, image, etc. It helps in setting up some communication server rules.
+                           <h4>3. PPP(Point-to-Point Protocol)</h4>t is a communication protocol that is used to create a direct connection between two communicating devices. This protocol defines the rules using which two devices will authenticate with each other and exchange
+                           information with each other. For example, A user connects his PC to the server of an Internet Service Provider and also uses PPP.
+                           Similarly, for connecting two routers for direct communication it uses PPP.
+                              
+                            <h4>4. FTP (File Transfer Protocol)</h4>
+                            
+                            This protocol is used for transferring files from one system to the other. This works on a client-server model. When a machine requests for file transfer from another machine, the FTO sets up a connection between the
+                            two and authenticates each other using their ID and Password. And, the desired file transfer takes place between the machines.
+                            <h4>5.SFTP(Secure File Transfer Protocol) </h4> 
+                            SFTP which is also known as SSH FTP refers to File Transfer Protocol (FTP) over Secure Shell (SSH) as it encrypts both commands and data while in transmission. SFTP acts as an extension to SSH and encrypts files and data then sends them over a secure shell data stream.
+                            This protocol is used to remotely connect to other systems while executing commands from the command line.
+                            
+                            This protocol is used for transferring files from one system to the other. This works on a client-server model. When a machine requests for file transfer from another machine, the FTO sets up a connection between the
+                            two and authenticates each other using their ID and Password. And, the desired file transfer takes place between the machines.
+                            <h4>6.  HTTP(Hyper Text Transfer Protocol)</h4>
+                            This protocol is used to transfer hypertexts over the internet and it is defined by the www(world wide web) for information transfer. This protocol defines how the information needs to be formatted and transmitted. And, it also defines the various actions the web browsers
+                            should take in response to the calls made to access a particular web page. Whenever a user opens their web browser,
+                            the user will indirectly use HTTP as this is the protocol that is being used to share text, images, and other multimedia files on the World Wide Web.
+                            <h4>7. IPv4</h4> 
+                            The fourth and initially widely used version of the Internet Protocol is called IPv4 (Internet Protocol version 4). It is the most popular version of the Internet Protocol and is in charge of distributing data packets throughout the network. Maximum unique addresses
+                            for IPv4 are 4,294,967,296 (232), which are possible due to the use of 32-bit addresses. The network address and the host address are the two components of each address. The host address identifies a particular device within the network, whereas the network address
+                            identifies the network to which the host belongs. In the “dotted decimal” notation, which is the standard for IPv4 addresses, each octet (8 bits) of the address is represented by its decimal value and separated by a dot (e.g. 192.168.1.1).
+                            
+                            <h4>8. IPv6</h4> 
+                            The most recent version of the Internet Protocol, IPv6, was created to address the IPv4 protocol’s drawbacks. A maximum of 4.3 billion unique addresses are possible with IPv4’s 32-bit addresses. Contrarily, IPv6 uses 128-bit addresses, which enable a significantly
+                            greater number of unique addresses. This is significant because IPv4 addresses were running out and there are an increasing number of devices that require internet access. Additionally, IPv6 offers enhanced security features like integrated authentication and encryption
+                            as well as better support for mobile devices. IPv6 support has spread among websites and internet service providers, and it is anticipated to gradually displace IPv4 as the main internet protocol.
+                            
+                            For more details, please refer Differences between IPv4 and IPv6 article. 
+                            
+                            <h4> 9. ICMP</h4> 
+                            ICMP (Internet Control Message Protocol) is a network protocol that is used to send error messages and operational information about network conditions. It is an integral part of the Internet Protocol (IP) suite and is used to help diagnose and troubleshoot issues with
+                            network connectivity. ICMP messages are typically generated by network devices, such as routers, in response to errors or exceptional conditions encountered in forwarding a datagram. Some examples of ICMP messages include:
+                            
+                            Echo Request and Echo Reply (ping)
+                            Destination Unreachable
+                            Time Exceeded
+                            Redirect
+                            ICMP can also be used by network management tools to test the reachability of a host and measure the round-trip time for packets to travel from the source to the destination and back. It should be noted that ICMP is not a secure protocol, it can be used in some types of network attacks like DDoS amplification.
+                            
+                            <h4>10. UDP</h4> 
+                            UDP (User Datagram Protocol) is a connectionless, unreliable transport layer protocol. Unlike TCP, it does not establish a reliable connection between devices before transmitting data, and it does not guarantee that data packets will be received in the order they were sent or that they will be received at all.
+                            Instead, UDP simply sends packets of data to a destination without any error checking or flow control. UDP is typically used for real-time applications such as streaming video and audio, online gaming, and VoIP (Voice over Internet Protocol) where a small amount of lost data is acceptable and low latency is important
+                             UDP is faster than TCP because it has less overhead. It doesn’t need to establish a connection, so it can send data packets immediately. It also doesn’t need to wait for confirmation that the data was received before sending more, so it can transmit data at a higher rate.
+                            
+                            <h4>11.IMAP</h4> 
+                            IMAP (Internet Message Access Protocol) is a protocol used for retrieving emails from a mail server. It allows users to access and manage their emails on the server, rather than downloading them to a local device. This means that the user can access their emails from multiple devices and the emails will be synced
+                            across all devices. IMAP is more flexible than POP3 (Post Office Protocol version 3) as it allows users to access and organize their emails on the server, and also allows multiple users to access the same mailbox.
+                            
+                            <h4> 12. SSH</h4> 
+                            SSH (Secure Shell) is a protocol used for secure remote login and other secure network services. It provides a secure and encrypted way to remotely access and manage servers, network devices, and other computer systems. SSH uses public-key cryptography to authenticate the user and encrypt the data being transmitted,
+                            making it much more secure than traditional remote login protocols such as Telnet. SSH also allows for secure file transfers using the SCP (Secure Copy) and SFTP (Secure File Transfer Protocol) protocols. It is widely used in Unix-based operating systems and is also available for Windows. It is commonly used by system administrators,
+                            developers, and other technical users to remotely access and manage servers and other network devices.
+                            
+                            <h2> OSI MODEL</h2>
+                            OSI stands for Open Systems Interconnection. It was developed by ISO – ‘International Organization for Standardization’, in the year 1984.is a reference framework that explains the process of transmitting data between computers. It is divided into seven layers that work together to carry out specialised network functions,
+                            allowing for a more systematic approach to networking.
+                            It is a 7-layer architecture with each layer having specific functionality to perform. All these 7 layers work collaboratively to transmit the data from one person to another across the globe.What are the 7 layers of the OSI Model?
+                            The OSI model consists of seven abstraction layers arranged in a top-down order:
+                            <div>
+                                <ul>
+                                  <li> Physical Layer</li>
+                                  <li> Data Link Layer</li>
+                                  <li> Network Layer</li>
+                                  <li> Transport Layer</li>
+                                  <li> Session Layer</li>
+                                  <li> Presentation Layer</li>
+                                  <li> Application Layer</li>
+                                 </ul>
+                              </div>
+                              <p>The table below gives a summary of functions of the 7 OSI layers</p>
+                              <div class="article medium">
+                                <img src="images\OSI 7 Layers.JPG">
+                                <div class="article content">
+
+                           
+                            
+
+
+                            <h2>Types of Internet Protocols</h2>
+                            TCP/IP was designed and developed by the Department of Defense (DoD) in the 1960s and is based on standard protocols. It stands for Transmission Control Protocol/Internet Protocol. The TCP/IP model is a concise version of the OSI model. It contains four layers, unlike the seven layers in the OSI model.
+                            The main work of TCP/IP is to transfer the data of a computer from one device to another. The main condition of this process is to make data reliable and accurate so that the receiver will receive the same information which is sent by the sender. To ensure that, each message reaches its final destination accurately,
+                            the TCP/IP model divides its data into packets and combines them at the other end, which helps in maintaining the accuracy of the data while transferring from one end to another end.
+                            <h3>What is the Difference between TCP and IP?</h3>
+                            TCP and IP are different protocols of Computer Networks. The basic difference between TCP (Transmission Control Protocol) and IP (Internet Protocol) is in the transmission of data. In simple words, IP finds the destination of the mail and TCP has the work to send and receive the mail. UDP is another protocol,
+                            which does not require IP to communicatewith another computer. IP is required by only TCP. This is the basic difference between TCP and IP.
+                            <h3>How Does the TCP/IP Model Work?</h3>
+                            Whenever we want to send something over the internet using the TCP/IP Model, the TCP/IP Model divides the data into packets at the sender’s end and the same packets have to be recombined at the receiver’s end to form the same data, and this thing happens to maintain the accuracy of the data. TCP/IP model divides the data into a 4-layer procedure,
+                            where the data first go into this layer in one order and again in reverse order to get organized in the same way at the receiver’s end.
+                            Layers of TCP/IP Model<div>
+                                <ul>
+                                  <li>Application Layer</li>
+                                  <li>Transport Layer(TCP/UDP)</li>
+                                  <li>Network/Internet Layer(IP)</li>
+                                  <li>Data Link Layer (MAC)</li>
+                                  <li>Physical Layer</li>
+                                 </ul>
+                              </div>
+                              <div class="article medium">
+                                <img src="images\OSI vs TCP.webp">
+                                <div class="article content">
+
+                              <h3>1. Physical Layer</h3>
+                              It is a group of applications requiring network communications. This layer is responsible for generating the data and requesting connections. It acts on behalf of the sender and the Network Access layer on the behalf of the receiver. During this article, we will be talking on the behalf of the receiver.
+                              
+                              <h3>2. Data Link Layer</h3>
+                              The packet’s network protocol type, in this case, TCP/IP, is identified by the data-link layer. Error prevention and “framing” are also provided by the data-link layer. Point-to-Point Protocol (PPP) framing and Ethernet IEEE 802.2 framing are two examples of data-link layer protocols.
+                              
+                              <h3>3. Internet Layer</h3>
+                              This layer parallels the functions of OSI’s Network layer. It defines the protocols which are responsible for the logical transmission of data over the entire network. The main protocols residing at this layer are as follows:
+                              
+                              IP: IP stands for Internet Protocol and it is responsible for delivering packets from the source host to the destination host by looking at the IP addresses in the packet headers. IP has 2 versions: IPv4 and IPv6. IPv4 is the one that most websites are using currently. But IPv6 is growing as the number of IPv4 addresses is limited in number when compared to the number of users.
+                              ICMP: ICMP stands for Internet Control Message Protocol. It is encapsulated within IP datagrams and is responsible for providing hosts with information about network problems.
+                              ARP: ARP stands for Address Resolution Protocol. Its job is to find the hardware address of a host from a known IP address. ARP has several types: Reverse ARP, Proxy ARP, Gratuitous ARP, and Inverse ARP.
+                              The Internet Layer is a layer in the Internet Protocol (IP) suite, which is the set of protocols that define the Internet. The Internet Layer is responsible for routing packets of data from one device to another across a network. It does this by assigning each device a unique IP address, which is used to identify the device and determine the route that packets should take to reach it.
+                              
+                              Example: Imagine that you are using a computer to send an email to a friend. When you click “send,” the email is broken down into smaller packets of data, which are then sent to the Internet Layer for routing. The Internet Layer assigns an IP address to each packet and uses routing tables to determine the best route for the packet to take to reach its destination. The packet is then forwarded to the next hop on its route until it reaches its destination. When all of the packets have been delivered, your friend’s computer can reassemble them into the original email message.
+                              
+                              In this example, the Internet Layer plays a crucial role in delivering the email from your computer to your friend’s computer. It uses IP addresses and routing tables to determine the best route for the packets to take, and it ensures that the packets are delivered to the correct destination. Without the Internet Layer, it would not be possible to send data across the Internet.
+                              
+                              <h3>4. Transport Layer</h3>
+                              The TCP/IP transport layer protocols exchange data receipt acknowledgments and retransmit missing packets to ensure that packets arrive in order and without error. End-to-end communication is referred to as such. Transmission Control Protocol (TCP) and User Datagram Protocol are transport layer protocols at this level (UDP).
+                              
+                              TCP: Applications can interact with one another using TCP as though they were physically connected by a circuit. TCP transmits data in a way that resembles character-by-character transmission rather than separate packets. A starting point that establishes the connection, the whole transmission in byte order, and an ending point that closes the connection make up this transmission.
+                              UDP: The datagram delivery service is provided by UDP, the other transport layer protocol. Connections between receiving and sending hosts are not verified by UDP. Applications that transport little amounts of data use UDP rather than TCP because it eliminates the processes of establishing and validating connections.
+                              <h3>5. Application Layer</h3>
+                              This layer is analogous to the transport layer of the OSI model. It is responsible for end-to-end communication and error-free delivery of data. It shields the upper-layer applications from the complexities of data. The three main protocols present in this layer are:
+                              
+                              HTTP and HTTPS: HTTP stands for Hypertext transfer protocol. It is used by the World Wide Web to manage communications between web browsers and servers. HTTPS stands for HTTP-Secure. It is a combination of HTTP with SSL(Secure Socket Layer). It is efficient in cases where the browser needs to fill out forms, sign in, authenticate, and carry out bank transactions.
+                              SSH: SSH stands for Secure Shell. It is a terminal emulations software similar to Telnet. The reason SSH is preferred is because of its ability to maintain the encrypted connection. It sets up a secure session over a TCP/IP connection.
+                              NTP: NTP stands for Network Time Protocol. It is used to synchronize the clocks on our computer to one standard time source. It is very useful in situations like bank transactions. Assume the following situation without the presence of NTP. Suppose you carry out a transaction, where your computer reads the time at 2:30 PM while the server records it at 2:28 PM. The server can crash very badly if it’s out of sync.
+                              The host-to-host layer is a layer in the OSI (Open Systems Interconnection) model that is responsible for providing communication between hosts (computers or other devices) on a network. It is also known as the transport layer.
+                              
+                              
+                              Other Common Internet Protocols
+                              TCP/IP Model covers many Internet Protocols. The main rule of these Internet Protocols is how the data is validated and sent over the Internet. Some Common Internet Protocols include:
+                              
+                              HTTP (Hypertext Transfer Protocol): HTTP takes care of Web Browsers and Websites. 
+                              FTP (File Transfer Protocol): FTP takes care of how the file is to be sent over the Internet.
+                              SMTP (Simple Mail Transfer Protocol): SMTP is used to send and receive data<br>
+                             
+       
+                                                       
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </body>
+</html>

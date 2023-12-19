@@ -1,0 +1,121 @@
+#include <Wire.h><br>
+    #include <Adafruit_SSD1306.h><br>
+    #include <TinyGPS++.h><br>
+     
+     
+    #define SCREEN_WIDTH 128 // OLED display width, in pixels <br>
+    #define SCREEN_HEIGHT 64 // OLED display height, in pixels <br>
+     
+    //On ESP32: GPIO-21(SDA), GPIO-22(SCL) <br>
+    #define OLED_RESET -1 //Reset pin # (or -1 if sharing Arduino reset pin)<br>
+    #define SCREEN_ADDRESS 0x3C //See datasheet for Address<br>
+    Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);<br>
+     
+    #define RXD2 16 <br>
+    #define TXD2 17 <br>
+    HardwareSerial neogps(1);<br>
+     
+    TinyGPSPlus gps; <br>
+     
+    void setup() { <br>
+      Serial.begin(115200); <br>
+      //Begin serial communication Arduino IDE (Serial Monitor)<br>
+     
+      //Begin serial communication Neo6mGPS<br>
+      neogps.begin(9600, SERIAL_8N1, RXD2, TXD2);<br>
+      
+      // SSD1306_SWITCHCAPVCC = generate display voltage from 3.3V internally<br>
+      if(!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)) { <br>
+        Serial.println(F("SSD1306 allocation failed"));<br>
+        for(;;); // Don't proceed, loop forever<br>
+      }<br>
+     
+      display.clearDisplay();<br>
+      display.display();<br>
+      delay(2000);<br>
+     
+    }
+     
+    void loop() { <br>
+        
+      boolean newData = false;<br>
+      for (unsigned long start = millis(); millis() - start < 1000;)<br>
+      {
+        while (neogps.available())<br>
+        {
+          if (gps.encode(neogps.read()))<br>
+          {
+            newData = true;<br>
+          }<br>
+        }<br>
+      }<br>
+     
+      //If newData is true<br>
+      if(newData == true)<br>
+        newData = false;<br>
+        Serial.println(gps.satellites.value());<br>
+        print_speed();<br>
+      }<br>
+      else<br>
+      {<br>
+        display.clearDisplay();<br>
+        display.setTextColor(SSD1306_WHITE);<br>
+        display.setCursor(0, 0);<br>
+        display.setTextSize(3);<br>
+        display.print("No Data");<br>
+        display.display();<br>
+      }  <br>
+      
+    }
+     
+    void print_speed()<br>
+    {<br>
+      display.clearDisplay();<br>
+      display.setTextColor(SSD1306_WHITE);<br>
+           
+      if (gps.location.isValid() == 1)<br>
+      {
+       //String gps_speed = String(gps.speed.kmph());<br>
+        display.setTextSize(1);<br>
+        
+        display.setCursor(25, 5);<br>
+        display.print("Lat: ");<br>
+        display.setCursor(50, 5);<br>
+        display.print(gps.location.lat(),6);<br>
+     
+        display.setCursor(25, 20);<br>
+        display.print("Lng: ");<br>
+        display.setCursor(50, 20);<br>
+        display.print(gps.location.lng(),6);<br>
+     
+        display.setCursor(25, 35);<br>
+        display.print("Speed: ");<br>
+        display.setCursor(65, 35);<br>
+        display.print(gps.speed.kmph());<br>
+        
+        display.setTextSize(1);<br>
+        display.setCursor(0, 50);<br>
+        display.print("SAT:");<br>
+        display.setCursor(25, 50);<br>
+        display.print(gps.satellites.value());<br>
+     
+        display.setTextSize(1);<br>
+        display.setCursor(70, 50);<br>
+        display.print("ALT:");<br>
+        display.setCursor(95, 50);<br>
+        display.print(gps.altitude.meters(), 0);<br>
+     
+        display.display();<br>
+        
+      }<br>
+      else<br>
+      {<br>
+        display.clearDisplay();<br>
+        display.setTextColor(SSD1306_WHITE);<br>
+        display.setCursor(0, 0);<br>
+        display.setTextSize(3);<br>
+        display.print("No Data");<br>
+        display.display();<br>
+      }  <br>
+     
+    }

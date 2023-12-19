@@ -1,0 +1,21 @@
+import time<br>
+from machine import Pin, I2C<br>
+
+import ahtx0<br>
+
+# Create I2C object<br>
+sda = Pin(26)<br>
+scl = Pin(27)<br>
+i2c = I2C(1, scl=scl, sda=sda)<br>
+
+# Create the sensor object using I2C<br>
+sensor = ahtx0.AHT10(i2c)<br>
+
+temperature = round(sensor.temperature, 2)<br>
+humidity = round(sensor.relative_humidity, 2)<br>
+
+while True:<br>
+    print("Temperature: ", temperature, "C")<br>
+    print("Humidity: ", humidity, "%")<br>
+    print()<br>
+    time.sleep(5)
